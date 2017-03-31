@@ -33,5 +33,12 @@ btn.on('click' , function(){
                         '<p class="text-justify line-clamp">'+ bio +'</p>'+
                      '</div></div>'+ '<div id="repos" class="ul"><div class="card-action"><h6 class="bold">Repositories</h6></div>')
 
+})
+.fail(function(){
+   $('#erro').addClass('scale-in');
+   setTimeout(function(){
+      $('#erro').removeClass('scale-in');
+   },2000);
+   $('#result').html('');
 });
 });
